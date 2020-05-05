@@ -1,1 +1,11 @@
+textX.txt are files with file holes created by fileHole.c,
+where X can take values 1, 2, 3,...
+and it represents that there are X chucks of file holes 
+each of size FILEHOLE_SIZE (defined in the code),
+between 2 chucks of data.
 
+
+Compile mycp1.c with -D_GNU_SOURCE option for gcc.
+Because it uses lseek's SEEK_DATA which will be
+visible from stdio.h only when _GNU_SOURCE macro 
+is enabled.
